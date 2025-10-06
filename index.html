@@ -1,115 +1,152 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>GLDSMP — Server Info</title>
-  <meta name="description" content="GLDSMP Minecraft server — IP, rules, features and join info">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GLDSMP — Friendly SMP</title>
+  <meta name="description" content="GLDSMP Minecraft server — IP, rules, features and join info" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <a class="logo" href="#">GLDSMP</a>
-      <nav class="nav">
+    <div class="container header-grid">
+      <a class="logo" href="#home">GLDSMP</a>
+
+      <nav class="nav" aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#rules">Rules</a>
         <a href="#features">Features</a>
-        <a href="#gallery">Gallery</a>
         <a href="#join">Join</a>
       </nav>
-      <button class="menu-btn" aria-label="Open menu">☰</button>
+
+      <button class="menu-btn" aria-label="Open menu" id="menuBtn">☰</button>
     </div>
   </header>
 
   <main>
+    <!-- Hero -->
     <section id="home" class="hero">
       <div class="container hero-inner">
-        <h1>Welcome to GLDSMP</h1>
-        <p class="lead">A friendly survival SMP with chill vibes and light PvP fun.</p>
+        <div class="hero-left reveal">
+          <h1>Welcome to <span class="accent">GLDSMP</span></h1>
+          <p class="lead">A friendly survival SMP — chill builds, community events, and light PvP.</p>
 
-        <div class="ip-card">
-          <div>
-            <div class="ip-label">Server IP</div>
-            <div id="server-ip" class="ip">gldsmp.falixsrv.me</div>
+          <div class="ip-card">
+            <div class="ip-info">
+              <div class="ip-label">Server IP</div>
+              <div id="server-ip" class="ip">gldsmp.falixsrv.me</div>
+            </div>
+
+            <div class="ip-actions">
+              <button id="copy-ip" class="btn">Copy IP</button>
+            </div>
           </div>
-          <div class="ip-actions">
-            <button id="copy-ip" class="btn">Copy IP</button>
-          </div>
+
+          <p class="small">Tip: Use <strong>/help</strong>, <strong>/shop</strong>, or <strong>/ah</strong> (auction) in-game for quick info.</p>
         </div>
 
-        <p class="small">Tip: Use <strong>/help</strong>, <strong>/shop</strong>, or <strong>/ah</strong> (auction) in-game for quick info.</p>
-        <a href="#join" class="btn big">Join the Server</a>
+        <aside class="hero-right reveal">
+          <ul class="badges">
+            <li>Friendly community</li>
+            <li>Simple PvP</li>
+            <li>Active staff</li>
+          </ul>
+
+          <a class="btn big" href="#join">Join the Server</a>
+        </aside>
       </div>
     </section>
 
+    <!-- Rules -->
     <section id="rules" class="section">
       <div class="container">
-        <h2>Server Rules</h2>
-        <p class="muted">Keep it fair, friendly, and fun for everyone!</p>
+        <h2 class="section-title reveal">Server Rules</h2>
+        <p class="muted reveal">Keep it fair, friendly, and fun for everyone!</p>
+
         <ul class="rules">
-          <li><h3>No hacked clients / cheats</h3><p>Any form of cheating, such as x-ray, kill aura, or auto-mining mods, is strictly forbidden.</p></li>
-          <li><h3>No freecam / camera exploits</h3><p>Freecam mods or spectator exploits to spy or gain unfair advantages are not allowed.</p></li>
-          <li><h3>No toxic behaviour / harassment</h3><p>Keep chat friendly and respectful. Racism, hate speech, and harassment result in instant bans.</p></li>
-          <li><h3>Staff decisions are final</h3><p>Respect staff authority. Their word is final to keep the peace and fairness on the server.</p></li>
-          <li><h3>Exploits & bugs</h3><p>Don’t abuse game bugs. Report them to staff immediately.</p></li>
+          <li class="card reveal">
+            <h3>No hacked clients / cheats</h3>
+            <p>Any cheating (x-ray, kill-aura, auto-miners, etc.) is strictly prohibited and will be punished.</p>
+          </li>
+
+          <li class="card reveal">
+            <h3>No freecam / camera exploits</h3>
+            <p>Freecam mods or spectator exploits used to gain advantage are banned.</p>
+          </li>
+
+          <li class="card reveal">
+            <h3>No toxic behaviour / harassment</h3>
+            <p>Be respectful. Hate speech, doxxing, harassment or targeted abuse will lead to immediate action.</p>
+          </li>
+
+          <li class="card reveal">
+            <h3>Staff decisions are final</h3>
+            <p>Staff are responsible for keeping the server fair — their decisions are final. Appeal processes available on Discord.</p>
+          </li>
+
+          <li class="card reveal">
+            <h3>Exploits & bugs</h3>
+            <p>If you find a bug or exploit, report it to staff. Abusing exploits may result in bans.</p>
+          </li>
         </ul>
+
+        <div class="rule-notes reveal"><strong>Penalties:</strong> warnings → temporary ban → permanent ban depending on severity.</div>
       </div>
     </section>
 
+    <!-- Features -->
     <section id="features" class="section alt">
       <div class="container">
-        <h2>Server Features</h2>
+        <h2 class="section-title reveal">Server Features</h2>
+
         <div class="features-grid">
-          <article><h4>Simple PvP Zone</h4><p>Enjoy light, friendly combat in a safe PvP area — just fun battles, no griefing.</p></article>
-          <article><h4>/shop Command</h4><p>Access the in-game shop using the <code>/shop</code> command to buy essentials easily.</p></article>
-          <article><h4>/ah Auction</h4><p>Use <code>/ah</code> to open the auction system and bid on player items.</p></article>
-          <article><h4>Community Events</h4><p>Occasional small events and competitions to keep things exciting.</p></article>
-          <article><h4>Friendly Staff</h4><p>Our moderators are here to help and keep things fun and fair for all players.</p></article>
+          <article class="feature card reveal">
+            <h4>Simple PvP Zone</h4>
+            <p>Friendly PvP area for organized duels and events — not a griefing hotspot.</p>
+          </article>
+
+          <article class="feature card reveal">
+            <h4>/shop Command</h4>
+            <p>Quickly buy essentials using <code>/shop</code>. Designed for convenience, not pay-to-win.</p>
+          </article>
+
+          <article class="feature card reveal">
+            <h4>/ah Auction</h4>
+            <p>Open the auction interface with <code>/ah</code> to list or bid on player items.</p>
+          </article>
+
+          <article class="feature card reveal">
+            <h4>Community Events</h4>
+            <p>Seasonal events, mini-games and contests with small prizes and lots of fun.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="gallery" class="section">
-      <div class="container">
-        <h2>Server Gallery</h2>
-        <p class="muted">Take a peek at our world — new images every few seconds!</p>
-
-        <div class="slideshow">
-          <div class="slides fade">
-            <img src="images/server1.jpg" alt="Spawn area">
-          </div>
-          <div class="slides fade">
-            <img src="images/server2.jpg" alt="PvP arena">
-          </div>
-          <div class="slides fade">
-            <img src="images/server3.jpg" alt="Community builds">
-          </div>
-          <a class="prev">&#10094;</a>
-          <a class="next">&#10095;</a>
-        </div>
-      </div>
-    </section>
-
+    <!-- Join -->
     <section id="join" class="section">
       <div class="container">
-        <h2>How to Join</h2>
-        <ol>
-          <li>Open Minecraft (Java edition recommended).</li>
-          <li>Add a new server with IP: <code>gldsmp.falixsrv.me</code>.</li>
-          <li>Join, read the rules, and have fun building and exploring!</li>
-        </ol>
+        <h2 class="section-title reveal">How to Join</h2>
 
-        <div class="contact">
-          <h4>Need help?</h4>
-          <p>Contact a staff member in-game or join our Discord: <a href="#">discord.gg/yourserver</a></p>
+        <div class="join-grid">
+          <ol class="join-steps card reveal">
+            <li>Open Minecraft (Java edition recommended).</li>
+            <li>Add a new server with IP: <code>gldsmp.falixsrv.me</code>.</li>
+            <li>Join, read the rules, and enjoy building and exploring!</li>
+          </ol>
+
+          <aside class="contact card reveal">
+            <h4>Need help?</h4>
+            <p>Ask staff in-game or hop on Discord: <a href="#" class="discord-link">discord.gg/yourserver</a></p>
+            <p class="muted small">Staff will help with bans/appeals on Discord if needed.</p>
+          </aside>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-grid">
       <small>© GLDSMP — Friendly SMP for everyone.</small>
       <div class="footer-links">
         <a href="#rules">Rules</a>
@@ -119,39 +156,41 @@
   </footer>
 
   <script>
-    // Copy IP
+    // Copy IP button
     document.getElementById('copy-ip')?.addEventListener('click', function(){
       const ip = document.getElementById('server-ip').innerText.trim();
-      navigator.clipboard?.writeText(ip).then(()=>{
-        this.innerText = 'Copied!';
-        setTimeout(()=> this.innerText = 'Copy IP', 2000);
-      }).catch(()=>{
-        alert('Could not copy — please copy manually: ' + ip);
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(ip).then(()=>{
+          this.innerText = 'Copied!';
+          setTimeout(()=> this.innerText = 'Copy IP', 2000);
+        }).catch(()=> alert('Could not copy — please copy manually: ' + ip));
+      } else {
+        alert('Select and copy: ' + ip);
+      }
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    menuBtn?.addEventListener('click', () => {
+      document.querySelector('.nav')?.classList.toggle('open');
+    });
+
+    // Scroll reveal using IntersectionObserver
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in-view');
+          io.unobserve(e.target);
+        }
       });
-    });
+    }, { threshold: 0.12 });
 
-    // Mobile menu
-    document.querySelector('.menu-btn')?.addEventListener('click', function(){
-      document.querySelector('.nav').classList.toggle('open');
-    });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-    // Gallery slideshow
-    let slideIndex = 0;
-    const slides = document.getElementsByClassName("slides");
-    const next = document.querySelector(".next");
-    const prev = document.querySelector(".prev");
-
-    function showSlides(n) {
-      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
-      slideIndex++;
-      if (slideIndex > slides.length) slideIndex = 1;
-      slides[slideIndex-1].style.display = "block";
-      setTimeout(showSlides, 5000);
-    }
-    showSlides();
-
-    next.onclick = ()=>{slideIndex++; if(slideIndex>slides.length){slideIndex=1;} showSlides(slideIndex);};
-    prev.onclick = ()=>{slideIndex--; if(slideIndex<1){slideIndex=slides.length;} showSlides(slideIndex);};
+    // Small accessibility: focus visible outline for keyboard users
+    document.addEventListener('keyup', (e) => {
+      if (e.key === 'Tab') document.body.classList.add('show-focus');
+    }, { once: true });
   </script>
 </body>
 </html>
